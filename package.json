@@ -8,6 +8,10 @@
   "keywords": [
     "function"
   ],
+  "files": [
+    "src",
+    "dist/*.js"
+  ],
   "scripts": {
     "test": "jest",
     "build": "yarn test && rollup --config",
