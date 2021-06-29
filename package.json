@@ -1,6 +1,6 @@
 {
   "name": "ifuncs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "useful functions collection",
   "main": "dist/ifuncs.min.js",
   "license": "MIT",
