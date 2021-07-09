@@ -8,7 +8,8 @@
     "outDir": "./dist",
     "allowJs": true,
     "moduleResolution": "node",
-    "declaration":true
+    "declaration":true,
+    "esModuleInterop": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules/**/*"]
