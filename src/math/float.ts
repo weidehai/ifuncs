@@ -1,8 +1,8 @@
 export function reliableFloatAdd(){
   let _agrs = arguments
   let maxTail = 0
-  function getMaxScale(){
-    Array.prototype.map.call(_agrs,(value)=>{
+  function getMaxScale():number{
+    Array.prototype.map.call(_agrs,(value:number):void=>{
       let tail =  value.toString().split('.')[1]
       if(tail){
         maxTail = Math.max(tail.length,maxTail)
@@ -10,8 +10,8 @@ export function reliableFloatAdd(){
     })
     return maxTail
   }
-  function transform(value){
-    function zeroGenerator(n){
+  function transform(value:number):number{
+    function zeroGenerator(n:number):string{
       let str = ''
       if(n<0) return
       while(n){
@@ -28,7 +28,7 @@ export function reliableFloatAdd(){
     return +(value.toString().replace('.','')+zeroGenerator(maxTail-fractionLen))
   }
   let scale = Math.pow(10,getMaxScale())
-  return Array.prototype.reduce.call(arguments,(accumulate,value)=>{
+  return Array.prototype.reduce.call(arguments,(accumulate:number,value:number):number=>{
     return accumulate + transform(value)
   },0)/scale
 }

@@ -1,5 +1,4 @@
-import * as ifuncs from '../src/main'
-
+const ifuncs = require('../src/main')
 
 test("arrayinsert",()=>{
   expect(ifuncs.arrayInsert(2,'w',[1,2,3,4])).toStrictEqual([1,2,'w',3,4])
@@ -7,10 +6,10 @@ test("arrayinsert",()=>{
 
 
 test("mergeOption",()=>{
-  expect(ifuncs.mergeOption({name:"123",age:"456"},{name:undefined,age:'789'})).toStrictEqual({name:'123',age:'456'})
+  expect(ifuncs.mergeOption({name:"123",age:"456"},{name:undefined,age:'789'})).toEqual({name:'123',age:'456'})
 })
 test("mergeOption",()=>{
-  expect(ifuncs.mergeOption({name:"123",age:undefined},{name:undefined,age:'789'})).toStrictEqual({name:'123',age:'789'})
+  expect(ifuncs.mergeOption({name:"123",age:undefined},{name:undefined,age:'789'})).toStrictEqual({name:'123',age:undefined})
 })
 test("mergeOption",()=>{
   expect(ifuncs.mergeOption({name:"123",age:undefined},{name:undefined,age:null})).toStrictEqual({name:'123',age:undefined})

@@ -1,4 +1,4 @@
-export function appendHTML(ele, html) {
+export function appendHTML(ele:HTMLElement, html:string):void{
   let divTemp = document.createElement("div");
   let frag = document.createDocumentFragment();
   let nodes = null;

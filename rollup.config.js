@@ -1,4 +1,5 @@
 import {terser} from 'rollup-plugin-terser';
+import typescript from 'rollup-plugin-typescript2';
 
 export default {
   input: "./src/main.js",
@@ -15,4 +16,5 @@ export default {
       plugins: [terser()],
     },
   ],
+  plugins: [typescript()]
 };
