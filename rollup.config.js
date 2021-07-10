@@ -2,7 +2,7 @@ import {terser} from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
 
 export default {
-  input: "./src/main.js",
+  input: "./src/main.ts",
   output: [
     {
       file: "./dist/ifuncs.js",

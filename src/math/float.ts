@@ -1,4 +1,4 @@
-export function reliableFloatAdd(){
+export function reliableFloatAdd(a:number,b:number){
   let _agrs = arguments
   let maxTail = 0
   function getMaxScale():number{
