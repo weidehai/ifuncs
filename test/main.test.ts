@@ -16,7 +16,7 @@ test("mergeOption", () => {
       { name: "123", age: "456" },
       { name: undefined, age: "789" }
     )
-  ).toEqual({ name: "123", age: "456" });
+  ).toEqual({ name: "12", age: "456" });
 });
 test("mergeOption", () => {
   expect(
