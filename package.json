@@ -13,16 +13,12 @@
     "src",
     "dist"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn test"
-    }
-  },
   "scripts": {
     "test": "jest",
     "build": "rollup --config && yarn test",
     "pu": "yarn test && yarn build && yarn publish",
-    "sync:github": "git add -A && git commit && git push -u origin master"
+    "sync:github": "git add -A && git commit && git push -u origin master",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.14.5",
