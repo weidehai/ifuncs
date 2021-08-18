@@ -1,5 +1,4 @@
-export function arrayInsert(index:number,value:any,arr:any[]){
-  let right = arr.splice(index)
-  right.unshift(value)
-  return arr.concat(right)
+export function arrayInsertBefore(index:number,value:any,arr:any[]){
+  arr.splice(index,0,value)
+  return arr
 }
