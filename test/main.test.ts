@@ -152,3 +152,25 @@ test("location search", () => {
   expect(result).not.toHaveProperty('tn',"baidu2");
   expect(result).toHaveProperty('wd',"大撒大撒");
 });
+
+
+test("random int", () => {
+  let result = ifuncs.getRandomInt(1,3)
+  expect(result).not.toBe(4)
+  expect(result).not.toBe(0)
+  expect(result).toBeGreaterThanOrEqual(1)
+  expect(result).toBeLessThanOrEqual(3)
+  expect(typeof result).toBe('number')
+  expect(result.toString()).not.toContain('.')
+});
+
+
+test("random float", () => {
+  let result = ifuncs.getRandomFloat(1,3)
+  expect(result).not.toBe(3)
+  expect(result).not.toBe(0)
+  expect(result).toBeGreaterThanOrEqual(1)
+  expect(result).toBeLessThan(3)
+  expect(typeof result).toBe('number')
+  expect(result.toString()).toContain('.')
+});
