@@ -1,4 +1,5 @@
 import * as ifuncs from "../src/main";
+import sort from '../src/sort/sort';
 
 test("arrayinsertBefore", () => {
   expect(ifuncs.arrayInsertBefore(2, "w", [1, 2, 3, 4])).toStrictEqual([
@@ -173,4 +174,16 @@ test("random float", () => {
   expect(result).toBeLessThan(3)
   expect(typeof result).toBe('number')
   expect(result.toString()).toContain('.')
+});
+
+test("sort", () => {
+  expect(sort.selectSort([3, 2, 1])).toEqual([1, 2, 3]);
+  expect(sort.quickSort([3, 2, 1])).toEqual([1,2,3]);
+  expect(sort.insertOrder([3, 2, 1])).toEqual([1,2,3]);
+  expect(sort.hillSort([3, 2, 1],4)).toEqual([1,2,3]);
+  expect(sort.hillSort([23, 10, 34, 31, 6, 59, 30, 20, 9, 63, 40, 39, 43, 6],4)).toEqual([6,6,9,10,20,23,30,31,34,39,40,43,59,63]);
+  expect(sort.multipleOrder([3, 2, 1])).toEqual([1,2,3]);
+  expect(sort.multipleOrder([23, 10, 34, 31, 6, 59, 30, 20, 9, 63, 40, 39, 43, 6])).toEqual([6,6,9,10,20,23,30,31,34,39,40,43,59,63]);
+  expect(sort.stackSort([3,2,1])).toEqual([1,2,3]);
+  expect(sort.stackSort([23, 10, 34, 31, 6, 59, 30, 20, 9, 63, 40, 39, 43, 6])).toEqual([6,6,9,10,20,23,30,31,34,39,40,43,59,63]);
 });
