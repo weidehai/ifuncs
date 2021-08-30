@@ -170,4 +170,4 @@ const sort: Sort = {
   multipleOrder,
   stackSort,
 };
-export default sort;
+export { sort };
