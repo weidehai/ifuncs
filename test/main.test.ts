@@ -186,3 +186,8 @@ test("sort", () => {
   expect(ifuncs.sort.stackSort([3,2,1])).toEqual([1,2,3]);
   expect(ifuncs.sort.stackSort([23, 10, 34, 31, 6, 59, 30, 20, 9, 63, 40, 39, 43, 6])).toEqual([6,6,9,10,20,23,30,31,34,39,40,43,59,63]);
 });
+
+test("base64 encode",()=>{
+  let result = ifuncs.base64Encode('AB')
+  expect(result).toEqual('QUI=')
+})

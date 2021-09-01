@@ -7,6 +7,7 @@ export * from './math/index'
 export * from './dom/index'
 export * from './location/search'
 export * from './sort/index'
+export * from './encode/index'
 
 
 
