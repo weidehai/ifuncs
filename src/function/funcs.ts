@@ -1,4 +1,4 @@
-import { isPureObject, isArray } from "../main";
+import { isPureObject, isArray } from "../check/typeCheck";
 
 export function dc(obj: unknown): unknown {
   let parent: Array<unknown> = [];
