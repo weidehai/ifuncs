@@ -24,7 +24,7 @@ export const search: search = (function () {
     parse(searchStr) {
       let _search =
         searchStr || (isBrowser && window.location.search.substring(1));
-      if (!_search) return;
+      if (!_search) return {};
       let items = _search.split("&");
       let result: Record<string, string> = {};
       items.forEach((item) => {
